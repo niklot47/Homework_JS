@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>(JS) Lesson 1 HW </title>
+</head>
+
+
+<body>
+
+</body>
+</html>
+<script>
+    let describe = '1 - Створити змінні. Присвоїти кожному з них значення. Вивести кожну змінну за допомогою: console.log , alert, document.write\n\n2 - Переприсвоїти кожній змінній з завдання значення на довільне. Вивести кожну змінну\n\n3 - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ...\n\n4 - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль\n\n5 - Визначити відповідний оператор в виразах що б вийшов відповідний результат\n\n6 - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?';
+
+    //1 - Створити змінні. Присвоїти кожному з них значення. Вивести кожну змінну за допомогою: console.log , alert, document.write
+    let myVar1;
+    myVar1 = 1;
+    let myVar2 = 10;
+    var myVar3;
+    myVar3 = -999;
+    var myVar4 = 123;
+    const PI = 3.14;
+    let randObj = {
+        param1: 2.7,
+        param2: 16
+    }
+    let massage2url = {
+        message: 'hello',
+        nameDomain: 'owu',
+        topDomain1: 'com',
+        topDomain2: 'ua'
+    }
+    let js_easy;
+    js_easy = true;
+    const canWeLeaveWithoutBeer = false;
+
+
+    //2 - Переприсвоїти кожній змінній з завдання значення на довільне. Вивести кожну змінну\n\n';
+    myVar1 = 101;
+    myVar2 = 210;
+    myVar3 = '333';
+    myVar4 = false;
+    //PI = 'nuSprobyemo))';
+    randObj.param1 = true;
+    randObj.param2 = 'true';
+    massage2url.message = 'ciao';
+    massage2url.nameDomain = 'google';
+    massage2url.topDomain1 = 'it';
+    massage2url.topDomain2 = null;
+    js_easy = 100 > 1;
+    //canWeLeaveWithoutBeer = false;
+
+    // 3 - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person. (Не об'єкт). За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+    let firstName = 'Микола '
+    let middleName = 'Володимирович '
+    let lastName = 'Козаков '
+    let person;
+
+
+
+    //дуже не зручно ок-ати у модальному вікні, створю switch
+    let choosePartOfHW = prompt(describe, 1)
+    switch (choosePartOfHW) {
+        case '1':
+            console.log(myVar1);
+            alert(myVar2);
+            document.write(myVar3);
+            console.log(myVar4);
+            alert(PI);
+            document.write(randObj.param1);
+            console.log(randObj.param2);
+            alert(massage2url.message);
+            document.write(massage2url.nameDomain);
+            console.log(massage2url['topDomain1']);
+            alert(massage2url['topDomain2']);
+            document.write(js_easy);
+            console.log(canWeLeaveWithoutBeer);
+            break;
+        case '2':
+            console.log(myVar1);
+            alert(myVar2);
+            document.write(myVar3);
+            console.log(myVar4);
+            alert(PI);
+            document.write(randObj.param1);
+            console.log(randObj.param2);
+            alert(massage2url.message);
+            document.write(massage2url.nameDomain);
+            console.log(massage2url['topDomain1']);
+            alert(massage2url['topDomain2']);
+            document.write(js_easy);
+            console.log(canWeLeaveWithoutBeer);
+            break;
+        case '3':
+            person = firstName + middleName;
+            person += lastName;
+            console.log(person);
+
+            firstName = prompt('Enter firstname', 'Пилип');
+            middleName = prompt('Enter middlename', 'Митрофанович');
+            myVar1 = prompt('Enter age', '1');
+            //Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+            if ((myVar1 % 10) === 1) {
+                console.log(`Вітаю ${firstName} ${middleName}. Тобі ${myVar1} рік`);
+            } else {
+                console.log(`Вітаю ${firstName} ${middleName}. Тобі ${myVar1} років`);
+            }
+            break;
+        case '4':
+            //- За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+            let a = 100;
+            let b = '100';
+            let c = true;
+            console.log(`a - ${typeof(a)}\nb - ${typeof(b)}\nc - ${typeof(c)}\n`)
+            break;
+        case '5':
+            // - Визначити відповідний оператор в виразах що б вийшов відповідний результат.
+            // В однакових виразах не використовувати однакові оператори!!!
+            // 5 ? 6 -> true
+            // 5 ? 6 -> false
+            // 5 ? 6 -> false
+            // 5 ? 6 -> false
+            // 10 ? 10 -> true
+            // 10 ? 10 -> true
+            // 10 ? 10 -> false
+            // 10 ? 10 -> false
+            // 10 ? 10 -> false
+            // 123 ? '123' -> false
+            // 123 ? '123' -> true
+            console.log(5 < 6);
+            console.log(5 > 6);
+            console.log(5 == 6);
+            console.log(5 === 6);
+            console.log(10 >= 10);
+            console.log(10 === 10);
+            console.log(10 != 10);
+            console.log(10 > 10);
+            console.log(10 < 10);
+            console.log(123 === '123');
+            console.log(123 == '123');
+            break;
+        case '6':
+            // - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
+            // let str = "20";
+            // let a = 5;
+            // document.write(str + a + "<br/>");
+            // document.write(str - a + "<br/>");
+            // document.write(str * "2" + "<br/>");
+            // document.write(str / 2 + "<br/>");
+            let str = "20";
+            let aa = 5;
+            alert('str + a    205   - бінарний оператор + складе як дві стрічки бо хоча б одина з операнд -стрічка')
+            document.write(str + aa + "<br/>");
+            alert('str - a    15    - оператор - приводить до чисел')
+            document.write(str - aa + "<br/>");
+            alert('str * "2"  40    - оператор множення теж приводить до чисел')
+            document.write(str * "2" + "<br/>");
+            alert('str / "2"  10   - те саме, приводить до чисел')
+            document.write(str / 2 + "<br/>");
+            break;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
