@@ -31,10 +31,46 @@
     console.log(result);
 
     let book ={
-        name: '',
-        bookLength: 0,
-        genre: ''
+        name: 'Lord of the rings',
+        bookLength: 1320,
+        genre: 'fantasy'
     }
+    book.author = 'J.R.R. Tolkien';
+
+    let library = [
+        {name: 'Lord of the rings', bookLength: 1320, genre: 'fantasy', author: 'J.R.R. Tolkien'},
+        {name: 'Anna Karenina', bookLength: 340, genre: 'Historical novel', author: 'Leo Tolstoy'},
+        {name: 'Madame Bovary', bookLength: 345, genre: 'Novel', author: 'Gustave Flaubert'},
+        {name: 'War and Peace', bookLength: 9643, genre: 'Historical novel', author: 'Leo Tolstoy'},
+        {name: 'Middlemarc', bookLength: 1345, genre: 'Novel', author: 'George Eliot'},
+        {name: 'The Adventures of Huckleberry Finn', bookLength: 334, genre: 'Historical novel', author: 'Mark Twain'},
+        {name: 'The Stories of Anton Chekhov', bookLength: 67, genre: 'Novel', author: 'Anton Chekhov'},
+        {name: 'In Search of Lost Time', bookLength: 520, genre: 'Novel', author: 'Marcel Proust'},
+        {name: 'Hamlet', bookLength: 1640, genre: 'Historical novel', author: 'William Shakespeare'},
+        {name: 'Moby Dick', bookLength: 2120, genre: 'Novel', author: 'Herman Melville'},
+    ];
+
+    for (let i = 0; i < library.length; i++) {
+        console.log('\"'+library[i].name+'\" by '+library[i].author+' ('+library[i].genre+', '+library[i].bookLength+')');
+    }
+
+    let height = 23;
+    let width = 10;
+    let s = height*width;
+    console.log('s = '+s);
+
+    let heightC = 10;
+    let dC = 4;
+    const PI = 3.14;
+    let v = PI*(dC/2)**2*heightC
+    console.log('v = '+v);
+
+    let n=3;
+    let m=4;
+    let k = ((n*n) + (m*m))**(0.5);
+    console.log('k = '+k);
+
+
 </script>
 </body>
 </html>
