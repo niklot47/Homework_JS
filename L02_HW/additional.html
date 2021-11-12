@@ -8,10 +8,9 @@
 <script>
 
     let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"];
-    if (friends.length<3){
+    if (friends.length < 3) {
         alert('це маленький масив');
-    }
-    else {
+    } else {
         alert('це великий масив');
     }
 
@@ -20,28 +19,21 @@
     let bb = prompt('Введіть друге число');
     let cc = prompt('Введіть третє число');
 
-    if (aa>bb){
-        if (aa<cc){
-            alert(aa+' между '+bb+' и '+cc)
+    if (aa > bb) {
+        if (aa < cc) {
+            alert(aa + ' между ' + bb + ' и ' + cc)
+        } else if (bb > cc) {
+            alert(bb + ' между ' + cc + ' и ' + aa)
+        } else {
+            alert(cc + ' между ' + bb + ' и ' + aa)
         }
-        else{
-            if(bb>cc){
-                alert(bb+' между '+cc+' и '+aa)
-            }
-            else{
-                alert(cc+' между '+bb+' и '+aa)
-            }
-        }
-    }
-    else{
-        if(aa>cc){
-            alert(aa+' между '+cc+' и '+bb)
-        }
-        else{
-            alert(cc+' между '+aa+' и '+bb)
+    } else {
+        if (aa > cc) {
+            alert(aa + ' между ' + cc + ' и ' + bb)
+        } else {
+            alert(cc + ' между ' + aa + ' и ' + bb)
         }
     }
-
 
 
     // if (a + b < 4) {
@@ -49,12 +41,11 @@
     // } else {
     //     result = 'Багато';
     // }
-    result = (a + b < 4)?'Мало':'Багато';
-
+    result = (a + b < 4) ? 'Мало' : 'Багато';
 
 
     let value = prompt('Введіть число', 0);
-    (value > 0)?alert(value+" позитивне"):(value < 0)?alert(value+" негативне"):alert( 0 );
+    (value > 0) ? alert(value + " позитивне") : (value < 0) ? alert(value + " негативне") : alert(0);
 
 </script>
 </body>
