@@ -106,7 +106,6 @@ for (let value of newArr2) {
     if (typeof (value) === 'number') {
         console.log(value);
     }
-    value += 1;
 }
 
 console.log('\n\nЗавдання:');
@@ -117,7 +116,6 @@ for (let value of newArr2) {
     if (typeof (value) === 'string') {
         console.log(value);
     }
-    value += 1;
 }
 
 
@@ -138,7 +136,6 @@ newArr3[9] = 'Грузовой вагон';
 
 for (let value of newArr3) {
     console.log(value);
-    value += 1;
 }
 
 
@@ -203,9 +200,3 @@ for (let i = 0; i < 100; i++) {
     }
 }
 document.write('</div>');
-
-// - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
-// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
-// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
-// - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
-// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
