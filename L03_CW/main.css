@@ -1,0 +1,31 @@
+.simpsons-box,
+.products{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-content: center;
+}
+
+.simpsons,
+.product-card{
+    width: 30%;
+    border: 2px solid lightslategrey;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar,
+.product-image{
+    display: inline;
+    height: 200px;
+}
+
+
+.product-card{
+    width: 22%;
+}
