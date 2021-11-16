@@ -93,7 +93,7 @@ let products = [
 document.write('<div class="products">');
 for (let i = 0; i<products.length; i++){
     document.write('<div class="product-card">');
-    document.write(`<h3 class="product-title">${products[i].title}. Price - ${products[i].price}</h3>
+                    document.write(`<h3 class="product-title">${products[i].title}. Price - ${products[i].price}</h3>
                      <img src=${products[i].image} class="product-image"  alt="product-image">`);
     document.write('</div>');
 }
