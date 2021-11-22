@@ -78,7 +78,8 @@ function allKeysFromObjectsToArray(arrayOfObject) {
     return resultArray;
 }
 
-let arr3 = [{name: 'Dima', age: 13}, {model: 'Camry', age: '16'}];
+let arr3 = [{name: 'Dima', age: 13},
+            {model: 'Camry', age: '16'}];
 console.log('\n\n\n' + allKeysFromObjectsToArray(arr3));
 
 
