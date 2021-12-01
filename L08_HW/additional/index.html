@@ -37,7 +37,7 @@
         <p>Бойцы сражаются без обуви и голые по пояс.</p>
     </div>
     <div class="rules rule6">
-        <h2 class="іфавпро">Шестое правило Бойцовского <space class="ghjkl"></space> клуба.</h2>
+        <h2 <!--class="іфавпро"-->>Шестое правило Бойцовского <!--<space class="ghjkl"></space>--> клуба.</h2>
         <p>Поединок продолжается столько, сколько потребуется.</p>
     </div>
     <div class="rules rule7">
@@ -54,24 +54,28 @@
 <script>
     // написати рекурсивну функцію, яка збирає всі назви класів з файлу rules.html в окремий масив. масив вивести в консоль
 
-    console.log(document.querySelectorAll('[class]'));
 
-    let allClasses = [];
-    let allElements = document.querySelectorAll('*');
-    // console.log(allElements);
-    for (var i = 0; i < allElements.length; i++) {
-        var classes = allElements[i].className.toString().split(/\s+/);
-        for (var j = 0; j < classes.length; j++) {
-            var cls = classes[j];
-            if (cls && allClasses.indexOf(cls) === -1)
-                allClasses.push(cls);
-        }
-    }
-    console.log(allClasses);
-
+    // console.log(document.classList);    //undefined
+    // console.log(document.body.classList);   //DOMTokenList[value: '']
+    // console.log(document.querySelectorAll('[class]')); //array
     //=================
-    console.log(document.classList);    //undefined
-    console.log(document.body.classList);   //DOMTokenList[value: '']
+
+    let allClasses = ()=> {
+        let allClasses = [];
+        let allElements = document.querySelectorAll('*');
+        // console.log(allElements);
+        for (var i = 0; i < allElements.length; i++) {
+            var classes = allElements[i].className.toString().split(/\s+/);
+            for (var j = 0; j < classes.length; j++) {
+                var cls = classes[j];
+                if (cls && allClasses.indexOf(cls) === -1)
+                    allClasses.push(cls);
+            }
+        }
+        return allClasses
+    }
+    console.log(allClasses());
+
 
 </script>
 </body>
