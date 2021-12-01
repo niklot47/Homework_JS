@@ -1,0 +1,19 @@
+.course, .course1{
+    margin: 10px;
+    background: lightslategrey;
+    border: 2px solid darkslateblue;
+    border-radius: 2px;
+    width: 400px;
+    padding: 10px;
+}
+
+.course{
+    background: antiquewhite;
+    width: 250px;
+    padding: 6px;
+}
+
+.course1 h1, .course1 p{
+    size: 10px;
+    margin: 0;
+}
