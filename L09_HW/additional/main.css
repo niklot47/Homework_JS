@@ -1,0 +1,82 @@
+body{
+    background:  black;
+    padding: 20px;
+    color: limegreen;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    line-height: 16px;
+}
+
+.wrap{
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 80px;
+
+}
+
+.userCard{
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 12px double limegreen;
+    width: 48%;
+}
+
+.userName{
+    border-bottom: 4px double limegreen;
+}
+
+.email{
+    margin-bottom: 20px;
+}
+
+
+.addressGeo{
+    display: flex;
+    /*flex-wrap: wrap;*/
+}
+
+.address{
+    width: 65%;
+    padding: 10px;
+    border: 2px solid limegreen;
+}
+
+.cityZip{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.geo{
+    width: 30%;
+    padding: 10px;
+    border: 2px solid limegreen;
+    border-left: none;
+}
+
+.lat, .lng{
+    display: flex;
+    justify-content: end;
+}
+
+.phone{
+    margin-top: 20px;
+}
+
+.company{
+    padding-top: 10px;
+    margin-top: 30px;
+    border-top:  2px solid limegreen;
+}
+
+.companyName{
+
+}
+
+.catchPhrase, .bs{
+    display: flex;
+    justify-content: end;
+}
