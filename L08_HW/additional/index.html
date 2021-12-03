@@ -37,7 +37,7 @@
         <p>Бойцы сражаются без обуви и голые по пояс.</p>
     </div>
     <div class="rules rule6">
-        <h2 <!--class="іфавпро"-->>Шестое правило Бойцовского <!--<space class="ghjkl"></space>--> клуба.</h2>
+        <h2>Шестое правило Бойцовского клуба.</h2>
         <p>Поединок продолжается столько, сколько потребуется.</p>
     </div>
     <div class="rules rule7">
@@ -54,27 +54,146 @@
 <script>
     // написати рекурсивну функцію, яка збирає всі назви класів з файлу rules.html в окремий масив. масив вивести в консоль
 
-
     // console.log(document.classList);    //undefined
     // console.log(document.body.classList);   //DOMTokenList[value: '']
     // console.log(document.querySelectorAll('[class]')); //array
     //=================
 
-    let allClasses = ()=> {
-        let allClasses = [];
-        let allElements = document.querySelectorAll('*');
-        // console.log(allElements);
-        for (var i = 0; i < allElements.length; i++) {
-            var classes = allElements[i].className.toString().split(/\s+/);
-            for (var j = 0; j < classes.length; j++) {
-                var cls = classes[j];
-                if (cls && allClasses.indexOf(cls) === -1)
-                    allClasses.push(cls);
+
+    //не рекурсивний спосіб
+
+    // let allClasses = ()=> {
+    //     let allClasses = [];
+    //     let allElements = document.querySelectorAll('*');
+    //     // console.log(allElements);
+    //     for (var i = 0; i < allElements.length; i++) {
+    //         var classes = allElements[i].className.toString().split(/\s+/);
+    //         for (var j = 0; j < classes.length; j++) {
+    //             var cls = classes[j];
+    //             if (cls && allClasses.indexOf(cls) === -1)
+    //                 allClasses.push(cls);
+    //         }
+    //     }
+    //     return allClasses
+    // }
+    // console.log(allClasses());
+
+
+    //https://stackoverflow.com/questions/2712136/how-do-i-make-this-loop-all-children-recursively
+
+    // function searchTree(element, matchingTitle){
+    //     if(element.title === matchingTitle){
+    //         return element;
+    //     }else if (element.children != null){
+    //         var i;
+    //         var result = null;
+    //         for(i=0; result === null && i < element.children.length; i++){
+    //             result = searchTree(element.children[i], matchingTitle);
+    //         }
+    //         return result;
+    //     }
+    //     return null;
+    // }
+    //
+    // var element = data[0];
+    // var result = searchTree(element, 'randomNode_1');
+
+
+    // console.log(document.childNodes);
+    let allClasses = [];
+    let iter = 0;
+
+    // let recursionClassSearch = function () {
+    //     if (arguments.length === 0) {
+    //         for (let node of document.childNodes) {
+    //             if (node.classList.length !== 0) {
+    //                 for (let classListElement of node.classList) {
+    //                     allClasses = allClasses.append(classListElement + ' ');
+    //                 }
+    //             }
+    //             if (node.childNodes.length !== 0) {
+    //                 for (let childNode of node.childNodes) {
+    //                     recursionClassSearch(childNode);
+    //                 }
+    //             }
+    //         }
+    //     } else {
+    //         for (let node of arguments[0].childNodes) {
+    //             if (node.classList.length !== 0) {
+    //                 for (let classListElement of node.classList) {
+    //                     allClasses = allClasses.append(classListElement + ' ');
+    //                 }
+    //             }
+    //             if (node.childNodes.length !== 0) {
+    //                 for (let childNode of node.childNodes) {
+    //                     recursionClassSearch(childNode);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    let recursionClassSearch = function () {
+        if (arguments.length === 0) {
+            if (document.classList) {
+                //console.log('\n\n'+(arguments[0]+'').replace('[','').replace(' HTML',': ').replace('Element]',''));
+                // console.log(arguments[0].classList);
+                for (let classListElement of document.classList) {
+                    if (!allClasses.includes(classListElement)) {
+                        allClasses[iter] = classListElement;
+                        iter++;
+                    }
+                }
+            }
+            iter = 0;
+            for (let i = 0; i < document.childNodes.length; i++) {
+                // if (document.classList) {
+                //     console.log(arguments[0].classList);
+                // }
+                let node = document.childNodes[i];
+                // if (node.classList) {
+                //     console.log(node);
+                // }
+                // console.log('length:  ' + node.childNodes.length);
+                if (node.childNodes.length !== 0) {
+                    for (let childNode of node.childNodes) {
+                        recursionClassSearch(childNode);
+                    }
+                }
+            }
+        } else {
+            if (arguments[0].classList) {
+                //console.log('\n\n'+(arguments[0]+'').replace('[','').replace(' HTML',': ').replace('Element]',''));
+                // console.log(arguments[0].classList);
+                for (let classListElement of arguments[0].classList) {
+                    if (!allClasses.includes(classListElement)) {
+                        allClasses[iter] = classListElement;
+                        iter++;
+                    }
+                }
+            }
+
+            for (let i = 0; i < arguments[0].childNodes.length; i++) {
+                let node = arguments[0].childNodes[i];
+                // console.log(i);
+                // console.log(node);
+                // if (arguments[0].childNodes[i].classList) {
+                //     // console.log(arguments[0].childNodes[i].classList);
+                // }
+                //console.log('length:  '+node.childNodes.length);
+                if (node.childNodes.length !== 0) {
+                    // console.log(node.childNodes);
+                    for (let childNode of node.childNodes) {
+                        recursionClassSearch(childNode);
+                    }
+                }
             }
         }
-        return allClasses
     }
-    console.log(allClasses());
+
+    //debugger
+    recursionClassSearch();
+    console.log(allClasses);
 
 
 </script>
