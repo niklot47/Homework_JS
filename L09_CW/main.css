@@ -1,0 +1,57 @@
+body {
+    background: #000;
+    color: limegreen;
+    padding: 20px;
+}
+
+.simpsonWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.member {
+
+    border: 1px solid limegreen;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    margin: 20px;
+}
+
+.img_Homer{
+    width: 360px;
+    /*filter: chroma();*/
+}
+
+.canvas{
+    /*width: 360px;*/
+}
+
+.wrap{
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cours{
+    width:280px;
+    border: 6px double limegreen;
+    margin: 20px;
+    padding: 20px;
+}
+
+.dur{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title{
+    font-size: 23px;
+    border-bottom: 2px solid limegreen;
+    margin-bottom: 10px;
+}
+
