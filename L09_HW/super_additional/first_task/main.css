@@ -4,13 +4,17 @@ body{
     color: limegreen;
 }
 
-.wrap2, .wrap3{
+.wrap, .wrap2, .wrap3{
     margin: 5px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 20px;
+}
+
+.wrap{
+    display: block;
 }
 
 .user{
