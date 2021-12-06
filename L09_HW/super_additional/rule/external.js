@@ -37,3 +37,20 @@ let rules = [
     },
 
 ];
+
+let wrap = document.createElement('div');
+wrap.classList.add('wrap');
+
+for (let rule of rules) {
+    let rule_div = document.createElement('div');
+    rule_div.classList.add('rule');
+    let title = document.createElement('h2');
+    title.innerText = rule.title;
+    let text = document.createElement('div');
+    text.innerText = rule.body;
+    rule_div.appendChild(title);
+    rule_div.appendChild(text);
+    wrap.appendChild(rule_div);
+}
+
+document.body.appendChild(wrap);

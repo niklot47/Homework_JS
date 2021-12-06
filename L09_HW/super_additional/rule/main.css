@@ -1,0 +1,13 @@
+body{
+    background: #000;
+    color: limegreen;
+    padding: 20px;
+}
+
+.rule{
+    margin: 30px;
+}
+
+.rule h2{
+    margin: 0;
+}
