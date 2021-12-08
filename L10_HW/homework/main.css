@@ -31,4 +31,12 @@ input:focus{
     border: 2px solid limegreen;
 }
 
+.dropdown{
+  width: 200px
+  margin-top: 0;
+  border: 1px solid limegreen;
+}
 
+.btn4{
+  margin-bottom: 0;
+}

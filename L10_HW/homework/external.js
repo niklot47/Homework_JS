@@ -130,8 +130,31 @@ document.body.appendChild(task3);
 
 
 // - Создайте меню, которое раскрывается/сворачивается при клике
+let menu = document.createElement('div');
+menu.classList.add('menu');
+let btn4 = document.createElement('button');
+btn4.classList.add('btn4');
+let dropdown = document.createElement('div')
+dropdown.classList.add('dropdown');
+let ul = document.createElement('ul');
+for (var i = 0; i < 10; i++) {
+  let li = document.createElement('li');
+  li.innerText = 'Menu option ' + i;
+  ul.appendChild(li);
+}
 
-
+menu.appendChild(btn4);
+dropdown.appendChild(ul)
+menu.appendChild(dropdown);
+document.body.appendChild(menu);
+btn4.innerText = 'Menu'
+btn4.onclick = ()=>{
+  if(dropdown.style.display === 'none'){
+  dropdown.style.display = 'flex';
+  }else{
+    dropdown.style.display = 'none'
+  }
+}
 
 // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 //     Вывести список комментариев в документ, каждый в своем блоке.
