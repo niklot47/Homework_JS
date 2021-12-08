@@ -1,0 +1,46 @@
+.b-popup{
+    position: absolute;
+    font-size:18px;
+    color: black;
+    margin:0px auto 0 auto;
+    min-width:100px;
+    min-height: 40px;
+    padding:10px;
+    background-color: azure;
+    border-radius:5px;
+    box-shadow: 0 0 10px #000;
+    display: none;
+}
+
+.popupClose{
+    display: flex;
+    justify-content: end;
+}
+
+
+.tblHeader{
+
+}
+
+.tbl{
+    margin-top: 50px;
+
+}
+
+.checkbox1, .checkbox2, .checkbox3{
+    margin-right: 50px;
+}
+
+.buttonFilter{
+
+}
+
+.row{
+    padding: 5px;
+    border: 2px solid black;
+    border-bottom: none;
+}
+
+.tblContent{
+    border-bottom: 2px solid black;;
+}
