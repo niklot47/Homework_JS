@@ -32,11 +32,59 @@ input:focus{
 }
 
 .dropdown{
-  width: 200px
+    display: none;
+  width: 200px;
   margin-top: 0;
   border: 1px solid limegreen;
 }
 
 .btn4{
   margin-bottom: 0;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.comment{
+
+    margin-top: 30px;
+    /*align-items: center;*/
+}
+
+.btn5{
+    box-sizing: border-box;
+    padding: 0px;
+    border: 2px solid limegreen;
+    min-width: 20px;
+    height: 20px;
+    margin: 10px 20px;
+
+}
+
+.header{
+    margin: 0;
+    align-items: center;
+    padding:  0 10px 0 10px;
+    border: 2px solid limegreen;
+    border-top: 6px solid limegreen;
+    border-right: 6px solid limegreen;
+    display: flex;
+}
+
+.body{
+    border: 2px solid limegreen;
+    border-right: 6px solid limegreen;
+    border-top: none;
+    display: flex;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.title{
+    margin: 10px;
+    font-size: 18px;
 }
