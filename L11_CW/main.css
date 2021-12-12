@@ -1,0 +1,42 @@
+body{
+    background: #EEECF1;
+    padding: 20px;
+}
+
+.wrap{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    background: #FEFEFE;
+    border-radius: 10px;
+    border: 1px solid #AEAEAE;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content{
+
+}
+
+.avatar{
+    width: 160px;
+    height: 160px;
+    background: #9CB2CE;
+    border-radius: 20px;
+}
+
+.card button{
+    margin-left: 40px;
+}
+
