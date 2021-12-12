@@ -1,0 +1,30 @@
+body{
+    padding: 20px;
+    background: #EEECF1;
+}
+
+#wrap1, #wrap2{
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    /*flex-direction: column;*/
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.post{
+    width: 700px;
+    min-height: 80px;
+    background: #FEFEFE;
+    border-radius: 10px;
+    border: 1px solid #AEAEAE;
+    padding: 20px;
+}
+
+.post h3{
+    margin: 0;
+}
+hr{
+    margin-bottom: 200px;
+}
+
