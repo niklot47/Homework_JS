@@ -1,0 +1,26 @@
+body{
+    padding: 20px;
+    background: #EEECF1;
+}
+
+.post{
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid lightgrey;
+}
+
+.wrap3 h3{
+    font-size: 18px;
+}
+
+.wrap3{
+    display: none;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.btn{
+    margin: 5px;
+}
