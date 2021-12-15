@@ -1,0 +1,335 @@
+
+/* Стилизация проекта -*/
+/* index.html - все блоки с user - по 2 в ряд. кнопки/ссылки находяться под информацией про user.*/
+
+
+/* user-details.html - блок с информацией про user вверху страницы. Кнопка ниже, на 90% ширины страницы, по центру.*/
+/* блоки с краткой информацией про post - в ряд по 5 объектов.*/
+
+
+/* post-details.html - блок с информацией про пост вверху. Комментарии - по 4 в ряд.*/
+/* Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так, что бы было видно их*/
+/* блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)*/
+
+    /*color-1:  #F3FAFE*/
+    /*--color1: white;*/
+    /*--color2: #7FA4BF;*/
+    /*--color3: #4F7D9D;*/
+    /*--color4: #336487;*/
+    /*--color5: #336487;*/
+    /*--color6: #0D3B5C;*/
+
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #EEECF1;
+}
+
+.index__header,
+.details__header,
+.posts__header{
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px;
+    background-color: #336487;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px #7FA4BF;
+}
+
+.details__header,
+.posts__header{
+    display: flex;
+}
+
+.details__panel,
+.posts__panel{
+    margin: 0 auto;
+    width: 800px;
+}
+
+.details__header a,
+.posts__header a{
+    color: white;
+    margin-right: 40px;
+}
+
+.index__users-wrap,
+.details__posts{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0 20px;
+    overflow-y: scroll;
+    max-height: 100ch;
+}
+
+.details__content-wrap,
+.posts__content-wrap {
+    margin: 60px;
+    box-sizing: border-box;
+    display: flex;
+    row-gap: 10px;
+    /*padding: 0 20px;*/
+}
+
+.posts__content-wrap{
+    margin: 40px;
+    flex-direction: column;
+}
+
+.details__content-wrap img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #7FA4BF;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+.details__details{
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+
+.index__users-wrap::-webkit-scrollbar,
+.details__posts::-webkit-scrollbar{
+    width: 10px;
+}
+
+.index__users-wrap::-webkit-scrollbar-thumb,
+.details__posts::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /*background-color: #4F7D9D;*/
+    /*-webkit-box-shadow: inset 0 0 6px #336487;*/
+    background-color: #4F7D9D;
+    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, .25) 50%,
+    rgba(255, 255, 255, .25) 75%,
+    transparent 75%,
+    transparent);
+}
+
+.index__users-wrap::-webkit-scrollbar-track,
+.details__posts::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px #7FA4BF;
+    border-radius: 10px;
+    background-color: #f9f9fd;
+}
+
+
+.index__content-wrap h2{
+    padding-left: 20px;
+    color: #4b4b4b;
+}
+
+
+.index__user{
+    background: white;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 800px;
+    min-height: 120px;
+    border-radius: 10px;
+    margin: 3px 0 5px 0;
+    box-shadow: 0 2px 5px #7FA4BF;
+
+    display: flex;
+}
+
+.index__user-img{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #7FA4BF;
+}
+
+.index__user-info{
+    color: #4b4b4b;
+    font-size: 24px;
+    padding-left: 20px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.index__user-panel{
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.index__user-details,
+.details__show{
+    padding: 3px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #4F7D9D;
+    color: white;
+    width: 120px;
+    font-size: 18px;
+    box-shadow: inset 0 5px 15px #7FA4BF;
+}
+
+.index__user-details:hover,
+.details__show:hover{
+    box-shadow:none;
+}
+
+.details__username{
+    margin: 0 0 10px;
+}
+
+.details__company,
+.details__address{
+    margin-top: 10px;
+}
+
+.details__address-wrap,
+.details__company-wrap{
+    padding-left: 40px;
+}
+
+.details__show{
+    margin-top: 40px;
+    width: 800px;
+    height: 40px;
+}
+
+.details__posts{
+    box-sizing: border-box;
+    display: none;
+    margin-top: 40px;
+    width: 800px;
+    height: 50ch;
+}
+
+.details__post{
+    background: white;
+    box-sizing: border-box;
+    padding: 20px;
+    min-height: 120px;
+    border-radius: 10px;
+    margin: 3px 0 5px 0;
+    box-shadow: 0 2px 5px #7FA4BF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details__post-details{
+    padding: 3px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #4F7D9D;
+    color: white;
+    width: 240px;
+    font-size: 18px;
+    box-shadow: inset 0 5px 15px #7FA4BF;
+}
+
+.post{
+    box-sizing: border-box;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+
+    background: white;
+    min-height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #7FA4BF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post a{
+    margin-top: 20px;
+}
+
+
+.post__img{
+    border-radius: 20px;
+    width: 760px;
+    height: 700px;
+}
+
+.post__body{
+    /*display: flex;*/
+    /*justify-content: end;*/
+    margin-bottom: 10px;
+}
+
+.post__id{
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #808080;
+}
+
+.comments{
+    margin-top: 60px;
+    width: 760px;
+    row-gap: 20px;
+}
+
+.comment{
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0;
+
+    background: white;
+    min-height: 90px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #7FA4BF;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    /*width: 760px;*/
+
+}
+
+.details__comment-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post a{
+    color: #4F95DA;
+}
+
+.comments{
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.comWithImg{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.com-img{
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 50%;
+    background: #7FA4BF;
+    margin-left: 20px;
+}

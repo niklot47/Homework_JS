@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="details__header">
+    <div class="details__panel"><a href="index.html">All users</a></div>
+</div>
+<div class="details__content-wrap">
+    <img src="img/user.png" alt="user">
+    <div class="details__details">
+        <h3 class="details__username">(id: _) Username</h3>
+        <div class="details__name">Name: Name Surname</div>
+        <div class="details__phone">Phone: +123 456 78 12</div>
+        <div class="details__email">Email: email@email.email</div>
+        <div class="details__website">Web: <a href="#" class="web">web.com</a></div>
+        <div class="details__address">
+            Address:
+            <div class="details__address-wrap">
+                <div class="details__city">City: city</div>
+                <div class="details__street">Street: street</div>
+                <div class="details__suite">Suite: suite</div>
+                <div class="details__zipcode">Zipcode: 78900</div>
+                <div class="details__geo">Location: 99lat, 99lng</div>
+            </div>
+        </div>
+        <div class="details__company">
+            Company:
+            <div class="details__company-wrap">
+                <div class="details__cm-name">Name: names</div>
+                <div class="details__bs">BS: bsbsbsbs</div>
+                <div class="details__catchPhrase">Catch phrase: catchPhrase</div>
+            </div>
+        </div>
+        <div class="details__company"></div>
+    </div>
+</div>
+<button class="details__show">Show all posts</button>
+<div class="details__posts" style="display: none;"></div>
+<script src="js-user-details.js"></script>
+</body>
+</html>
