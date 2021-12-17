@@ -100,7 +100,6 @@ for (let a of arr) {
             localStorage.setItem('list', JSON.stringify(arr));
         }
     }
-
 }
 
 window.onload = () => {

@@ -44,6 +44,7 @@ for (let e of list) {
     }
 }
 
+
 document.getElementById('clear').onclick = () => {
     list = [];
     localStorage.clear();
