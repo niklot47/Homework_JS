@@ -149,6 +149,7 @@ function fast(a) {
 
 async function wrap () {
     const long1 = await long(true);
+    const fast1 = await fast(a);
     // console.log(long1);
     // console.log(fast1);
 }
